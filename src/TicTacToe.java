@@ -72,7 +72,42 @@ public class TicTacToe implements ActionListener {
     }
 
     public void check() {
-
+        //X win
+        if ((Objects.equals(buttons[0].getText(), "X")) && (Objects.equals(buttons[1].getText(), "X")) && (Objects.equals(buttons[2].getText(), "X"))) {
+            xWins(0, 1, 2);
+        } else if ((Objects.equals(buttons[3].getText(), "X")) && (Objects.equals(buttons[4].getText(), "X")) && (Objects.equals(buttons[5].getText(), "X"))) {
+            xWins(3, 4, 4);
+        } else if ((Objects.equals(buttons[6].getText(), "X")) && (Objects.equals(buttons[7].getText(), "X")) && (Objects.equals(buttons[8].getText(), "X"))) {
+            xWins(6, 7, 8);
+        } else if ((Objects.equals(buttons[0].getText(), "X")) && (Objects.equals(buttons[3].getText(), "X")) && (Objects.equals(buttons[6].getText(), "X"))) {
+            xWins(0, 3, 6);
+        } else if ((Objects.equals(buttons[1].getText(), "X")) && (Objects.equals(buttons[4].getText(), "X")) && (Objects.equals(buttons[7].getText(), "X"))) {
+            xWins(1, 4, 7);
+        } else if ((Objects.equals(buttons[2].getText(), "X")) && (Objects.equals(buttons[5].getText(), "X")) && (Objects.equals(buttons[8].getText(), "X"))) {
+            xWins(2, 5, 8);
+        } else if ((Objects.equals(buttons[0].getText(), "X")) && (Objects.equals(buttons[4].getText(), "X")) && (Objects.equals(buttons[8].getText(), "X"))) {
+            xWins(0, 4, 8);
+        } else if ((Objects.equals(buttons[2].getText(), "X")) && (Objects.equals(buttons[4].getText(), "X")) && (Objects.equals(buttons[6].getText(), "X"))) {
+            xWins(2, 4, 6);
+        }
+        //O win
+        if ((Objects.equals(buttons[0].getText(), "O")) && (Objects.equals(buttons[1].getText(), "O")) && (Objects.equals(buttons[2].getText(), "O"))) {
+            oWins(0, 1, 2);
+        } else if ((Objects.equals(buttons[3].getText(), "O")) && (Objects.equals(buttons[4].getText(), "O")) && (Objects.equals(buttons[5].getText(), "O"))) {
+            oWins(3, 4, 4);
+        } else if ((Objects.equals(buttons[6].getText(), "O")) && (Objects.equals(buttons[7].getText(), "O")) && (Objects.equals(buttons[8].getText(), "O"))) {
+            oWins(6, 7, 8);
+        } else if ((Objects.equals(buttons[0].getText(), "O")) && (Objects.equals(buttons[3].getText(), "O")) && (Objects.equals(buttons[6].getText(), "O"))) {
+            oWins(0, 3, 6);
+        } else if ((Objects.equals(buttons[1].getText(), "O")) && (Objects.equals(buttons[4].getText(), "O")) && (Objects.equals(buttons[7].getText(), "O"))) {
+            oWins(1, 4, 7);
+        } else if ((Objects.equals(buttons[2].getText(), "O")) && (Objects.equals(buttons[5].getText(), "O")) && (Objects.equals(buttons[8].getText(), "O"))) {
+            oWins(2, 5, 8);
+        } else if ((Objects.equals(buttons[0].getText(), "O")) && (Objects.equals(buttons[4].getText(), "O")) && (Objects.equals(buttons[8].getText(), "O"))) {
+            oWins(0, 4, 8);
+        } else if ((Objects.equals(buttons[2].getText(), "O")) && (Objects.equals(buttons[4].getText(), "O")) && (Objects.equals(buttons[6].getText(), "O"))) {
+            oWins(2, 4, 6);
+        }
     }
 
     public void xWins(int a, int b, int c) {
