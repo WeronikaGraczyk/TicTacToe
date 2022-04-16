@@ -58,7 +58,11 @@ public class TicTacToe implements ActionListener {
     }
 
     public void firstTurn() {
-
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         for (JButton button : buttons) {
             button.setEnabled(true);
         }
@@ -111,11 +115,23 @@ public class TicTacToe implements ActionListener {
     }
 
     public void xWins(int a, int b, int c) {
-
+        buttons[a].setBackground(new Color(184, 255, 107));
+        buttons[b].setBackground(new Color(184, 255, 107));
+        buttons[c].setBackground(new Color(184, 255, 107));
+        for (JButton button : buttons) {
+            button.setEnabled(false);
+        }
+        textField.setText("X wins");
     }
 
     public void oWins(int a, int b, int c) {
-
+        buttons[a].setBackground(new Color(184, 255, 107));
+        buttons[b].setBackground(new Color(184, 255, 107));
+        buttons[c].setBackground(new Color(184, 255, 107));
+        for (JButton button : buttons) {
+            button.setEnabled(false);
+        }
+        textField.setText("O wins");
     }
 
     @Override
